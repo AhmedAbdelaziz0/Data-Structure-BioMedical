@@ -31,7 +31,8 @@ int main() {
 You can convert temperature from degrees Celsius to degrees Fahrenheit by multiplying by `9/5` and adding 32. Write a program that allows the user to enter a floating-point number representing degrees Celsius, and then displays the corresponding degrees Fahrenheit.
 <details>
 <summary>Answer:</summary>
-```
+
+```cpp
 #include <iostream>
 
 using namespace std;
@@ -48,6 +49,7 @@ int main() {
     return 0;
 }
 ```
+
 </details>
 
 ## 3. Fraction Addition
@@ -77,7 +79,8 @@ Sum = 9/10
 <details>
 
 <summary>Answer:</summary>
-```
+
+```cpp
 #include <iostream>
 
 using namespace std;
@@ -97,6 +100,7 @@ int main() {
     cout << "Sum = " << sum << endl;
 }
 ```
+
 </details>
 
 ## 4. Multiplication Table
@@ -112,6 +116,32 @@ Enter a number: 7
 147 154 161 168 175 182 189 196 203 210
 ```
 
+<details>
+<summary>Answer:</summary>
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main () {
+    int number;
+    cout << "Enter a number: ";
+    cin >> number;
+
+    for (int row = 0; row < 20; row ++) {
+        for (int col = 0; col < 10; col ++) {
+            int idx = row * 10 + col + 1;
+
+            cout << idx * number << " ";
+        }
+    }
+    return 0;
+}
+```
+
+</details>
+
 ## 5. Bi-directional Temperature Conversion
 
 Write a temperature-conversion program that gives the user the option of converting Fahrenheit to Celsius or Celsius to Fahrenheit.
@@ -123,6 +153,15 @@ Type 1 to convert Fahrenheit to Celsius, 2 to convert Celsius to Fahrenheit: 1
 Enter temperature in Fahrenheit: 70
 In Celsius that’s 21.111111
 ```
+
+<details>
+<summary>Answer:</summary>
+
+```cpp
+
+```
+
+</details>
 
 ## 6. Pyramid of Xs
 
@@ -136,9 +175,27 @@ Use `for` loops to construct a program that displays a pyramid of Xs on the scre
 xxxxxxxxx
 ```
 
+<details>
+<summary>Answer:</summary>
+
+```cpp
+
+```
+
+</details>
+
 ## 7. Factorial Calculation
 
 Write code to calculate the factorial of a number. The number should be entered by the user.
+
+<details>
+<summary>Answer:</summary>
+
+```cpp
+
+```
+
+</details>
 
 ## 8. Fraction Calculator
 
@@ -150,3 +207,12 @@ The arithmetic operations on fractions are:
 - **Subtraction:** `(a/b) - (c/d) = (a * d - b * c) / (b * d)`
 - **Multiplication:** `(a/b) * (c/d) = (a * c) / (b * d)`
 - **Division:** `(a/b) / (c/d) = (a * d) / (b * c)`
+
+<details>
+<summary>Answer:</summary>
+
+```cpp
+
+```
+
+</details>
