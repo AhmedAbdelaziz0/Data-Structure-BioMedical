@@ -4,9 +4,50 @@
 
 Assuming there are 7.481 gallons in a cubic foot, write a program that asks the user to enter a number of gallons, and then displays the equivalent in cubic feet.
 
+<details>
+<summary>Answer:</summary>
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double gallons;
+
+    cout << "Enter the number of gallons: ";
+    cin >> gallons;
+
+    cout << "Equivalent in cubic feet: " << gallons * 7.481 << endl;
+
+    return 0;
+}
+```
+</details>
+
 ## 2. Temperature Conversion
 
 You can convert temperature from degrees Celsius to degrees Fahrenheit by multiplying by `9/5` and adding 32. Write a program that allows the user to enter a floating-point number representing degrees Celsius, and then displays the corresponding degrees Fahrenheit.
+<details>
+<summary>Answer:</summary>
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double celsius;
+
+    cout << "Enter the temperature in Celsius: ";
+    cin >> celsius;
+
+    double fahrenheit = (celsius * 9 / 5) + 32;
+
+    cout << "Equivalent in Fahrenheit: " << fahrenheit << endl;
+    return 0;
+}
+```
+
+</details>
 
 ## 3. Fraction Addition
 
@@ -31,6 +72,31 @@ Enter first fraction: 1/2
 Enter second fraction: 2/5
 Sum = 9/10
 ```
+
+<details>
+
+<summary>Answer:</summary>
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double a, b, c, d;
+    char dummy;
+
+    cout << "Enter first fraction: ";
+    cin >> a >> dummy >> b;
+
+    cout << "Enter second fraction: ";
+    cin >> c >> dummy >> d;
+
+    double sum = (a * d + b * c) / (b * d);
+
+    cout << "Sum = " << sum << endl;
+}
+```
+</details>
 
 ## 4. Multiplication Table
 
