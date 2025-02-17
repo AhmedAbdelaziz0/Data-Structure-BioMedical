@@ -6,7 +6,8 @@ Assuming there are 7.481 gallons in a cubic foot, write a program that asks the 
 
 <details>
 <summary>Answer:</summary>
-```
+
+```cpp
 #include <iostream>
 
 using namespace std;
@@ -22,6 +23,7 @@ int main() {
     return 0;
 }
 ```
+
 </details>
 
 ## 2. Temperature Conversion
@@ -46,7 +48,6 @@ int main() {
     return 0;
 }
 ```
-
 </details>
 
 ## 3. Fraction Addition
