@@ -158,6 +158,32 @@ In Celsius that’s 21.111111
 <summary>Answer:</summary>
 
 ```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  char choice;
+  float temperature;
+  cout << "Type 1 to convert Fahrenheit to Celsius, 2 to convert Celsius to "
+          "Fahrenheit: ";
+
+  cin >> choice;
+
+  if (choice == '1') {
+    cout << "Enter temperature in Fahrenheit: ";
+    cin >> temperature;
+    cout << "In Celsius that’s" << (temperature - 32) * 5.0 / 9;
+  } else if (choice == '2') {
+    cout << "Enter temperature in Celsius: ";
+    cin >> temperature;
+    cout << "In Fahrenheit this's " << temperature * 9.0 / 5 + 32;
+  } else {
+    cout << "Enter valid number\n";
+  }
+
+  return 0;
+}
 
 ```
 
@@ -179,7 +205,29 @@ xxxxxxxxx
 <summary>Answer:</summary>
 
 ```cpp
+#include <iostream>
 
+using namespace std;
+
+void print_char(char ch, int count) {
+}
+
+int main() {
+  int max_rows = 20;
+  for (int row = 0; row < max_rows; row++) {
+    // print spaces
+    for(int i = 0; i < max_rows - 1 - row; i++) {
+      cout << ' ';
+    }
+
+    // print x
+    for(int i = 0; i < 2 * row + 1; i++) {
+      cout << 'x';
+    }
+    cout << '\n';
+  }
+  return 0;
+}
 ```
 
 </details>
@@ -192,7 +240,21 @@ Write code to calculate the factorial of a number. The number should be entered 
 <summary>Answer:</summary>
 
 ```cpp
+#include <iostream>
 
+using namespace std;
+
+int main() {
+  int number, factorial = 1;
+  cout << "Enter a number: ";
+  cin >> number;
+  
+  while (number != 1) {
+    factorial *= number;
+    number --;
+  }
+  cout << "Factorial of your number is " << factorial << '\n';
+}
 ```
 
 </details>
@@ -212,7 +274,44 @@ The arithmetic operations on fractions are:
 <summary>Answer:</summary>
 
 ```cpp
+#include <iostream>
 
+using namespace std;
+
+int main() {
+  int a, b, c, d, num, den;
+  char dummy, op;
+  
+  cout << "Enter operation: ";
+  cin >> a >> dummy >> b >> op >> c >> dummy >> d;
+
+  switch (op) {
+    case '+':
+      num = a * d + b * c;
+      den = b * d;
+      break;
+
+    case '-':
+      num = a * d - b * c;
+      den = b * d;
+      break;
+
+    case '*':
+      num = a * c;
+      den = b * d;
+      break;
+
+    case '/':
+      num = a * d;
+      den = b * c;
+      break;
+
+    default:
+      cout << "Unsupported operation\n";
+  }
+
+  cout << "Result = " << num << '/' << den << '\n';
+}
 ```
 
 </details>
