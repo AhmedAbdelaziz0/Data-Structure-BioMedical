@@ -1,3 +1,3 @@
 # Data-Structure-Medical
 
-Solve Sheet in Section 1 before the section.
+`Sheet 1` answers can be found in `Section 1` directory
