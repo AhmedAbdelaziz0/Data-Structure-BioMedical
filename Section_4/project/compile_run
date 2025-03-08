@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# compile
+g++ -I include/ -c *.cpp
+
+# link
+g++ -L /lib/ *.o -o main
+
+# run
+./main
