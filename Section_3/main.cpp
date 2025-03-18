@@ -72,7 +72,6 @@ int main() {
   cout << "a op b: \n";
   cin >> f1 >> op >> f2;
 
-
   switch (op) {
   case '+':
     res = f1 + f2;
