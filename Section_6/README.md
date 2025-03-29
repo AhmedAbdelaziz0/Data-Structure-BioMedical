@@ -2,6 +2,8 @@
 
 In this sheet we will implement Stack and Queue data structure.
 
+## Stack
+
 ### Start with the stack file and implement it.
 - it is a stack with constant size (10)
 - it has basic methods (top, pop, push, isEmpty, isFull)
@@ -26,3 +28,7 @@ and delete in destructor), the size is either default `80` or given by the class
 Stack<float> st; // size = 80
 Stack<float> st(1000); // size = 1000
 ```
+
+## Queue
+
+### Implement the queue data structure.
