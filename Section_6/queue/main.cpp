@@ -1,11 +1,10 @@
-#include <iostream>
 #include "Queue.h"
 
 using namespace std;
 
 int main() {
-  Queue<int> q;
-  
+  Queue<int> q(5);
+
   // test empty and full
   q.enqueue(1);
   q.enqueue(2);

@@ -1,8 +1,9 @@
 #include "Stack.h"
 #include <iostream>
 
+// need further testing
 int main() {
-  Stack st;
+  Stack st(100);
 
   std::cout << st.isEmpty() << std::endl;
 
