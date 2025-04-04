@@ -12,7 +12,7 @@ In this sheet we will implement Stack and Queue data structure.
 
 ### Modify the stack class:
 
-- Make it more generic by making it template class.
+- Make it more generic by making it template class, you must use single file that contain the whole class (no more `.cpp` and `.h` only `.h`) to avoid linking errors.
 **Hint:**
 
 ```cpp
@@ -32,3 +32,4 @@ Stack<float> st(1000); // size = 1000
 ## Queue
 
 ### Implement the queue data structure.
+Write the whole class in a single file.
