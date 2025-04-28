@@ -1,4 +1,5 @@
 #include "LinkedList.h"
+#include "Stack.h"
 #include <iostream>
 
 using namespace std;
@@ -8,7 +9,22 @@ void testStack();
 void testCalculator();
 
 int main() {
+  testStack();
   return 0;
+}
+
+void testStack() {
+  Stack<int> st;
+
+  std::cout << st.isEmpty() << std::endl;
+
+  st.push(1);
+
+  st.push(2);
+  std::cout << st.top() << std::endl;
+
+  st.pop();
+  std::cout << st.top() << std::endl;
 }
 
 void testList() {
@@ -53,5 +69,4 @@ void testList() {
   list.removeAt(2);
   // list = 2 -> 3 -> 4 -> 5 -> 6 -> 7
   cout << list << endl;
-
 }

@@ -9,3 +9,6 @@
 
 3. Stack with linked list
 - Implement stack with linked list data structure.
+
+4. Application of stack (not complete)
+- Use stack data structure to implement a calculator.
