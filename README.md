@@ -6,4 +6,4 @@
 - `Sheet 4` answers can be found in `Section 4`
 - `Sheet 5` answers can be found in `Section 5`
 - `Sheet 6` answers can be found in `Section 6`
-- `Sheet 7` can be found in `Section 7`
+- `Sheet 7` answers can be found in `Section 7`

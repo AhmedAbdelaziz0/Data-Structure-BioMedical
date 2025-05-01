@@ -8,11 +8,31 @@ private:
   int maxsize;
   int size;
 
+  // linear search
   int get_index(int elem) {
     int index = 0;
     while (index < size && arr[index] < elem)
       index++;
     return index;
+  }
+
+  // binary search
+  int get_index_fast(int elem) {
+    if (size == 0)
+      return 0;
+
+    int left = 0, right = size;
+    int mid;
+
+    while (left < right) {
+      mid = left + (right - left) / 2;
+
+      if (arr[mid] < elem)
+        left = mid + 1;
+      else
+        right = mid;
+    }
+    return left;
   }
 
   void insert_at(int index, int elem) {
@@ -23,7 +43,7 @@ private:
   }
 
   void remove_at(int index) {
-    for (int i = size - 1; i > index; i--) {
+    for (int i = index + 1; i < size; i++) {
       arr[i - 1] = arr[i];
     }
   }
@@ -37,7 +57,7 @@ public:
       size++;
     } else {
       // find suitable place
-      int index = get_index(elem);
+      int index = get_index_fast(elem);
       insert_at(index, elem);
       size++;
     }
@@ -46,7 +66,7 @@ public:
   void remove(int elem) {
     // make sure it exists
     if (arr[0] <= elem && elem <= arr[size - 1]) {
-      int index = get_index(elem);
+      int index = get_index_fast(elem);
       remove_at(index);
       size--;
     }
@@ -63,14 +83,19 @@ public:
 int main() {
   SortedArray sarr(10);
 
-  sarr.insert(10);
+  sarr.insert(13);
+  sarr.insert(0);
   sarr.insert(12);
   sarr.insert(0);
+  sarr.insert(14);
+  sarr.insert(10);
+  sarr.insert(8);
 
   // 0 10 12
   sarr.print();
 
-  sarr.insert(1);
+  sarr.insert(2);
+  sarr.insert(-1);
   // 0 1 10 12
   sarr.print();
 
