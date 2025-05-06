@@ -89,20 +89,20 @@ int linearSearch(int *arr, int size, int elem) {
 
 int binarySearch(int *arr, int size, int elem) {
   if (size == 0)
-    return 0;
+    return -1;
 
-  int left = 0, right = size;
+  int left = 0, right = size - 1;
   int mid;
 
-  while (left < right) {
+  while (left <= right) {
     mid = (left + right) / 2;
 
     if (arr[mid] == elem)
       return mid;
-    else if (elem > arr[mid])
+    else if (arr[mid] < elem)
       left = mid + 1;
     else
-      right = mid;
+      right = mid - 1;
   }
   return -1;
 }
