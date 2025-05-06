@@ -17,7 +17,7 @@ int main() {
   cout << "Array: ";
   print(arr, size);
 
-  bubbleSort(arr, size);
+  insertionSort(arr, size);
   print(arr, size);
 
   cout << binarySearch(arr, size, 1) << '\n';
@@ -49,9 +49,7 @@ void bubbleSort(int *arr, int size) {
   for (int i = size - 1; i >= 0; i--) {
     for (int j = 0; j < i; j++) {
       if (arr[j] > arr[j + 1]) {
-        int t = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = t;
+        Swap(arr[j], arr[j + 1]);
       }
     }
   }
@@ -59,7 +57,7 @@ void bubbleSort(int *arr, int size) {
 
 void insertionSort(int *arr, int size) {
   for (int i = 1; i < size; i++) {
-    int cur = arr[i];
+    int cur = arr[i]; // copy value
     int j = i - 1;
     while ((j >= 0) && (arr[j] > cur)) {
       arr[j + 1] = arr[j];
@@ -76,9 +74,7 @@ void selectionSort(int *arr, int size) {
       if (arr[min_idx] > arr[j])
         min_idx = j;
     }
-    int t = arr[i];
-    arr[i] = arr[min_idx];
-    arr[min_idx] = t;
+    Swap(arr[min_idx], arr[i]);
   }
 }
 
@@ -106,7 +102,7 @@ int binarySearch(int *arr, int size, int elem) {
     else if (elem > arr[mid])
       left = mid + 1;
     else
-     right = mid;
+      right = mid;
   }
   return -1;
 }
